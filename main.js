@@ -13,3 +13,7 @@ const bands = [
   "Anywhere But Here",
   "An Old Dog"
 ];
+
+document.querySelector("#bands").innerHTML = bands.map(
+  band => `<li>${band}</li>`
+);
