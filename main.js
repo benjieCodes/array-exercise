@@ -14,6 +14,14 @@ const bands = [
   "An Old Dog"
 ];
 
-document.querySelector("#bands").innerHTML = bands.map(
+const sortedBands = bands.sort(function(a, b) {
+  if (a > b) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
+
+document.querySelector("#bands").innerHTML = sortedBands.map(
   band => `<li>${band}</li>`
 );
